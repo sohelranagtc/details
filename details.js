@@ -33,7 +33,7 @@ const DeleteMessage = () =>{
 
 const getDataAll = () => {
     let cart = {}
-    const SaveCart = localStorage.getItem('player')
+    const SaveCart = localStorage.getItem('info')
     if(SaveCart){
         cart = JSON.parse(SaveCart)
     }
@@ -48,28 +48,46 @@ const showAllData = (name, others) =>{
     Container.appendChild(p)
 }
 
+
+// const setData = ()=>{
+//     const name = document.getElementById('first-send').value;
+//     const email = document.getElementById('second-send').value;
+//     const msg = document.getElementById('third-send').value;
+//     const info = {name, email, msg};
+//     const stringify = JSON.stringify(info)
+//     localStorage.setItem('info', stringify)
+// }
+
+
+
 const SendAll = () => {
-    const cart = getDataAll()
-    const IdName = document.getElementById('name').innerText
-    const GetName = document.getElementById('get-name')
-    const Name = GetName.value
-    GetName.value = ""
-    cart[IdName] = Name
+    const name = document.getElementById('get-name').value;
+    const email = document.getElementById('get-email').value;
+    const msg = document.getElementById('get-message').value;
+    const info = {name, email, msg};
+    const stringify = JSON.stringify(info)
+    localStorage.setItem('info', stringify)
+    // const cart = getDataAll()
+    // const IdName = document.getElementById('name').innerText
+    // const GetName = document.getElementById('get-name')
+    // const Name = GetName.value
+    // GetName.value = ""
+    // cart[IdName] = Name
 
-    const EmailID = document.getElementById('email').innerText
-    const GetEmail = document.getElementById('get-email')
-    const Email = GetEmail.value
-    GetEmail.value = ""
-    cart[EmailID] = Email
+    // const EmailID = document.getElementById('email').innerText
+    // const GetEmail = document.getElementById('get-email')
+    // const Email = GetEmail.value
+    // GetEmail.value = ""
+    // cart[EmailID] = Email
 
-    const MessageID = document.getElementById('message').innerText
-    const GetMessage = document.getElementById('get-message')
-    const Message = GetMessage.value
-    GetMessage.value = ""
-    cart[MessageID] = Message
+    // const MessageID = document.getElementById('message').innerText
+    // const GetMessage = document.getElementById('get-message')
+    // const Message = GetMessage.value
+    // GetMessage.value = ""
+    // cart[MessageID] = Message
 
-    const cartStringified = JSON.stringify(cart)
-    localStorage.setItem('player', cartStringified)
+    // const cartStringified = JSON.stringify(cart)
+    // localStorage.setItem('player', cartStringified)
 }
 
 const DisplayAllMyData = () => {
