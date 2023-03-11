@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,19 +12,19 @@
     <section class="container mx-auto justify-center">
         <div class="flex justify-center items-cente mt-10">
             <div class="gap-y-10 bg-blue-200 m-10 p-10 rounded-md">
-                <p>Name :</p>
+                <p id="name">Name</p>
                 <div class="flex gap-x-5 mb-5 mt-2">
                     <input id="get-name" type="text" placeholder="Type Your Name" class="input input-bordered input-secondary w-full max-w-xs" />
                     <button onclick="SendName()" class="btn btn-secondary">Send</button>
                     <button onclick="DeleteName()" class="btn btn-secondary">Delete</button>
                 </div>
-                <p>E-mail :</p>
+                <p id="email">E-mail</p>
                 <div class="flex gap-x-5 mb-5 mt-2">
                     <input id="get-email" type="text" placeholder="abc@mail.com" class="input input-bordered input-secondary w-full max-w-xs" />
                     <button onclick="SendEmail()" class="btn btn-secondary">Send</button>
                     <button onclick="DeleteEmail()" class="btn btn-secondary">Delete</button>
                 </div>
-                <p>Message :</p>
+                <p id="message">Message</p>
                 <div class="flex gap-x-5 mb-5 mt-2">
                     <textarea id="get-message" class="textarea textarea-secondary w-56" placeholder="Your Message"></textarea>
                     <button onclick="SendMessage()" class="btn btn-secondary">Send</button>
@@ -34,6 +34,9 @@
                     <button onclick="SendAll()" class="btn btn-success">Send</button>
                     <button onclick="ResetAll()" class="btn btn-warning">Reset</button>
                 </div>
+            </div>
+            <div id="container" class="gap-y-10 bg-blue-200 m-10 p-10 rounded-md w-full font-semibold"> 
+
             </div>
         </div>
     </section>
